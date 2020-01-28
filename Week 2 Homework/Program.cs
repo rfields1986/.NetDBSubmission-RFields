@@ -13,6 +13,7 @@ namespace Week_2_Homework
         {
             int exit = 0, input;
             string file = "Tickets.csv";
+            string tick, sum, stat, prior, sub, ass, watch;
             do
             {
                 //ask for choice
@@ -25,10 +26,25 @@ namespace Week_2_Homework
                         while (!rd.EndOfStream)
                         {
                             string line = rd.ReadLine();
-                            string[] arr = line.Split(',');
+                            string line1 = rd.ReadLine();
+                            string[] arr = line1.Split(',');
                             Console.WriteLine($"Ticket ID: {arr[0]}\nSummary: {arr[1]}\nStatus: {arr[2]}\nPriority: {arr[3]}\n" +
-                                $"Submitter: {arr[4]}\nAssigned {arr[5]}\nWatching {arr[6]}\n");
+                                $"Submitter: {arr[4]}\nAssigned: {arr[5]}\nWatching: {arr[6]}\n");
+                            rd.Close();
                             
+                        }
+                        break;
+
+                    case 2:
+                        {
+                            StreamWriter rd1 = new StreamWriter(file, append: true);
+
+
+                        }
+                        break;
+                    case 3:
+                        {
+
                         }
                         break;
                 }
